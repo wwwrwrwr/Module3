@@ -254,7 +254,7 @@ function renderBookings() {
         </ul>
       </div>
       <div class="d-grid gap-2">
-        <a href="#" class="btn btn-success" onclick="approveBooking(${b.id}); return false;">Одобрить</a>
+        <a href="#" class="btn ${b.status === 'approved' ? 'btn-secondary disabled' : 'btn-success'}" onclick="approveBooking(${b.id}); return false;">Одобрить</a>
         <a href="#" class="btn btn-danger" onclick="deleteBooking(${b.id}); return false;">Удалить</a>
       </div>
     </div>
